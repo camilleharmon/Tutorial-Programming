@@ -6,7 +6,7 @@ using CreatorKitCode;
 public class UseEffect : UsableItem.UsageEffect
 {
     public float Duration = 10.0f;
-    public int SpeedChange = 5;
+    public int SpeedChange = 30;
     public Sprite EffectSprite;
 
     public override bool Use(CharacterData user)

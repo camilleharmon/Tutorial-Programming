@@ -5,7 +5,7 @@ using CreatorKitCode;
 
 public class EquipmentEffect : EquipmentItem.EquippedEffect
 {
-     public int defenseChange = 5;
+     public int defenseChange = 30;
      public override void Equipped(CharacterData user)
      {
           // StatSystem.StatModifier myStatModifier = new StatSystem.StatModifier();
@@ -17,6 +17,7 @@ public class EquipmentEffect : EquipmentItem.EquippedEffect
           StatSystem.StatModifier modifier = new StatSystem.StatModifier();
           modifier.ModifierMode = StatSystem.StatModifier.Mode.Absolute;
           modifier.Stats.defense = defenseChange;
+          //user.AddModifier(modifier);
      }
      
      public override void Removed(CharacterData user)
@@ -24,5 +25,6 @@ public class EquipmentEffect : EquipmentItem.EquippedEffect
           StatSystem.StatModifier modifier = new StatSystem.StatModifier();
           modifier.ModifierMode = StatSystem.StatModifier.Mode.Absolute;
           modifier.Stats.defense = -defenseChange;
+          //user.AddModifier(modifier);
      }
 }
